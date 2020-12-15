@@ -1,0 +1,156 @@
+.first-div{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqTfhT5qKc1952uN6VagwaHQYdbJRMVmVAtQ&usqp=CAU);
+    width: 100%;
+    height: 940px;
+    color: hotpink;
+}
+
+
+#text-first-div{
+    padding: 180px 130px;
+}
+
+.logo{
+    border-radius: 50%;
+    width: 8.4rem;
+    height: 8.4rem;
+    margin: 0 auto 1.2rem;
+}
+
+.logo-div{
+    padding:60px;
+}
+
+h1,h2,h3,h4,h5,h6,p,li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 1000;
+    font-size: 2rem;
+}
+
+.div-form{
+    width: 100%;
+    height: 500px;
+    background-color: #F3E9E9;
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    padding-top: 50px;
+    padding-right: 200px;
+}
+
+form{
+    padding-left: 100px;
+}
+
+.icons{
+    padding: 50px 45px;
+}
+
+.requirements{
+    padding-top: 5px;
+    color: green;
+}
+
+.all-icons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.horizontal-line{
+    background-color: #00aeef;
+    width: 70px;
+    height: 4px;
+}
+
+.vertical-line{
+    border-left: 2px solid green;
+    height: 60%;
+    margin: 70px;
+}
+
+/*
+#name{
+    position: relative;
+    left: 40px;
+    top: 25px;
+}
+
+#username{
+    position: relative;
+    left: 40px;
+    top: 15px;
+}
+*/
+
+.aboutUs-div{
+    width: 100%;
+    height: 600px;
+    background-color: #39B54A;
+    text-align: center;
+    padding-top: 45px;
+    color: white;
+    word-spacing: 8px;
+}
+
+.team{
+    width: 100%;
+    height: 400px;
+}
+
+.team-mates{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.files input {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    padding: 120px 0px 85px 35%;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+}
+
+.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+}
+
+.files{ position:relative}
+
+.files:after {  pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.color input{ background-color:#f1f1f1;}
+
+.files:before {
+    position: absolute;
+    bottom: 10px;
+    left: 0;  pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    content: " or drag it here. ";
+    display: block;
+    margin: 0 auto;
+    color: #2ea591;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+}
