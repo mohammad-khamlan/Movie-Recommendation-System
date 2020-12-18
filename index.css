@@ -1,13 +1,34 @@
 .first-div{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqTfhT5qKc1952uN6VagwaHQYdbJRMVmVAtQ&usqp=CAU);
+    background-image: url('films\ webbage\ 2.jpg');
     width: 100%;
-    height: 940px;
-    color: hotpink;
+    height: 1240px;
+    background-size:100% 100% ;
 }
 
+#userID{
+    width: 30%;
+}
 
 #text-first-div{
-    padding: 180px 130px;
+    padding: 16% 11%;
+    line-height: 2;
+    font-weight: bold;
+    font-size: 12rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-msg{
+    font-size: 3.1rem;
+    line-height: 1.3;
+    font-family:sans-serif;
+    color: #f5f4dc;
+    width: fit-content;
+}
+
+.in{
+    padding-top: 3%;
 }
 
 .logo{
@@ -21,10 +42,10 @@
     padding:60px;
 }
 
-h1,h2,h3,h4,h5,h6,p,li{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 1000;
-    font-size: 2rem;
+h2,h3,h4,h5,h6,p,li{
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .div-form{
@@ -33,15 +54,6 @@ h1,h2,h3,h4,h5,h6,p,li{
     background-color: #F3E9E9;
     display: flex;
     justify-content: center;
-}
-
-.form{
-    padding-top: 50px;
-    padding-right: 200px;
-}
-
-form{
-    padding-left: 100px;
 }
 
 .icons{
@@ -65,28 +77,14 @@ form{
 }
 
 .vertical-line{
-    border-left: 2px solid green;
+    border-left: 2px solid black;
     height: 60%;
-    margin: 70px;
+    margin: 4.3%;
 }
-
-/*
-#name{
-    position: relative;
-    left: 40px;
-    top: 25px;
-}
-
-#username{
-    position: relative;
-    left: 40px;
-    top: 15px;
-}
-*/
 
 .aboutUs-div{
     width: 100%;
-    height: 600px;
+    height: 150%;
     background-color: #39B54A;
     text-align: center;
     padding-top: 45px;
@@ -94,63 +92,115 @@ form{
     word-spacing: 8px;
 }
 
+.para{
+    text-align: left;
+    float: left;
+    padding-left: 6%;
+    padding-top: 3%;
+    line-height: 1.68;
+}
+
+#numbers{
+    display: flex;
+    justify-content: center;
+    padding-top: 16%;
+    align-items: center;
+    font-size: 3.3rem;
+    color: black;
+    line-height: 3;
+}
+
 .team{
+    padding-top: 10%;
     width: 100%;
-    height: 400px;
+    height: 60%;
+    background-image: url("https://wac-cdn.atlassian.com/dam/jcr:6db86e6a-a05c-414c-a3e9-58db75bce1bb/left_bottom_hero.png?cdnVersion=1376"),url("https://wac-cdn.atlassian.com/dam/jcr:42a7d2a5-669b-44c9-8980-9f83600ab4d9/right_bottom_hero.png?cdnVersion=1376");
+    background-position: bottom left,bottom right;
+    background-repeat: no-repeat,no-repeat;
+    background-size: 600px 300px, 600px 300px;
 }
 
-.team-mates{
-    display:flex;
-    justify-content: space-evenly;
-}
-
-.files input {
-    outline: 2px dashed #92b0b3;
-    outline-offset: -10px;
-    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
-    transition: outline-offset .15s ease-in-out, background-color .15s linear;
-    padding: 120px 0px 85px 35%;
-    text-align: center !important;
-    margin: 0;
-    width: 100% !important;
-}
-
-.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
-    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
-    transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
-}
-
-.files{ position:relative}
-
-.files:after {  pointer-events: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 50px;
-    right: 0;
-    height: 56px;
-    content: "";
-    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
-    display: block;
-    margin: 0 auto;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.color input{ background-color:#f1f1f1;}
-
-.files:before {
-    position: absolute;
-    bottom: 10px;
-    left: 0;  pointer-events: none;
-    width: 100%;
-    right: 0;
-    height: 57px;
-    content: " or drag it here. ";
-    display: block;
-    margin: 0 auto;
-    color: #2ea591;
-    font-weight: 600;
-    text-transform: capitalize;
+.our-team{   /* text */
+    padding-bottom: 3%;
     text-align: center;
+}
+
+.team-mates, .names{   /* div contains team photos*/
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8%;
+}
+
+.person{   /* the photos */ 
+    border-radius: 50%;
+    width: 8.4rem;
+    height: 8.4rem;
+    margin-left:7.3%;
+    margin-right: 3%;
+}
+
+.profile{
+    padding:3%;
+    font-family:  "Nunito Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+
+h1,h2,h3,h4,h5,h6,a{
+  margin:0;
+}
+
+a{
+  color: inherit;
+}
+
+nav {
+    padding-top: 3%;
+    float: left;
+    width: fit-content;
+    position: fixed;
+}
+
+.container {
+  text-align: right;
+}
+
+.container ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.container ul li a:hover {
+  padding: 12px;
+  color: #fc0;
+}
+
+.container ul li a {
+  padding: 10px;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.container p{
+color: #fc0;
+font-weight: 700;
+font-size: 20px;
+}
+
+#to_top{
+    position: fixed;
+    padding-right: 10%;
+}
+
+.name{
+    color: #707070;
+    font-weight: 400;
+}
+
+.major{
+    color: #00FF3C;
+    font-weight: 450;
 }

@@ -5,144 +5,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAM.N</title>
-    <link rel="stylesheet" href="index.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+        $('#sec-1').addClass("active");
+
+        $("#sec-1").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#one").offset().top - 66
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-2").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#two").offset().top - 112
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-3").click(function () {
+            $(' html,body').animate({
+                scrollTop: $("#three").offset().top - 112
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-4").click(function () {
+            $(this).addClass("active");
+            $('html,body ').animate({
+                scrollTop: $("#four").offset().top - 112
+            }, 1000);
+            return false;
+        });
+    </script>
+
 
 </head>
 
-<body>
-    <div class="first-div">
-        <div class="logo-div">
-            <img class="logo" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
-        </div>
+<body onload="bright()">
+    <div class="first-div default first item" id="one">
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a id="sec-1" href="#one">Home</a></li>
+                    <li><a id="sec-2" href="#two">Use The system</a></li>
+                    <li><a id="sec-3" href="#three">About Us</a></li>
+                    <li><a id="sec-4" href="#four">Staff</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div id="text-first-div">
-            <p class="first-header">Welcome to I Recommend</p>
-            <h1 class="first-header">
-                We are creative group
-                <br>
-                of students
-                <br>
-                who aims to
-                <br> build affective projects.
+            <h1 class="first-header" id="main-msg">
+                Discover
+                new movies<br>
+                in one step.
             </h1>
-        </div>
-    </div>
 
-    <!-- 
-        Use the system
-    --->
+            <div class="in">
+                <form method="POST">
+                    <p>Find a perfect match to your mood</p>
+                    <input class="form-control form-control-lg" type="number" placeholder="userID" id="userID">
+                </form>
+            </div>
 
-    <div class="div-form">
-        <div class="form">
-            <h3>
-                How to deal with the website
-            </h3>
-            <!--
-                simple horizontal line under the title
-            -->
-            <div class="horizontal-line"></div>
-
-            <p style="padding-top: 5px;">
-                You have to input file(.csv), that contains these features:
-            </p>
-
-            <!--
-                First div for icons
-            -->
-            <div class="all-icons ">
-
-                <div class="icons ">
-                    <i class="glyphicon glyphicon-user"></i>
-                    <br>
-                    <P class="requirements">User ID</P>
-                </div>
-
-                <div class="icons ">
-                    <i class="glyphicon glyphicon-user"></i>
-                    <br>
-                    <P class="requirements">Movie ID</P>
-                </div>
+            <div class="answer">
 
             </div>
 
-            <!--
-                second div for icons
-            -->
-            <div class="all-icons ">
 
-                <div class="icons ">
-                    <i class="glyphicon glyphicon-user"></i>
-                    <br>
-                    <P class="requirements">Rating</P>
-                </div>
-
-                <div class="icons ">
-                    <i class="glyphicon glyphicon-user"></i>
-                    <br>
-                    <P class="requirements">Movie Title</P>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="vertical-line"></div>
-
-        <div class="form">
-            <form action="POST">
-                <div class="form-group files color">
-                    <label>Upload Your File </label>
-                    <input type="file" class="form-control" multiple="">
-                </div>
-            </form>
         </div>
 
     </div>
+
+
 
     <!--
         About us
     -->
-    <div class="aboutUs-div">
-        <p> Hello There
-            <br>
-            We Are I Recommend
-        </p>
-        <p>
-            I Recommend is website to give you
-            <br>
-            recommendations for movies you've watched,
-            <br>
-            using machine learning algorithms and big data principles,
-            <br>
-            we came out with this website.
+    <div class="aboutUs-div item " id="three">
+        <!--
+            this div for header
+        -->
+        <div>
+            <p> Hello There
+                <br>
+                We Are I Recommend
+            </p>
+        </div>
 
-            Our data set consists of over than 27,000,000 rows and 6
-            columns:
+        <!--
+            this div for the paragraph
+        -->
+        <div class="row">
+            <p class="para">
+                I Recommend is website to give you
+                <br>
+                recommendations for movies you've watched,
+                <br>
+                using machine learning algorithms and big data principles,
+                <br>
+                we came out with this website.
+                Our data set consists of over than 27,000,000 rows and 6
+                columns:
+            </p>
+        </div>
+        <!--
+            This div for nubmers to show about the data
+        -->
+        <div id="numbers" class="row">
+            <div>
+                <p>100836</p>
+                <p>Different users</p>
+            </div>
 
-        </p>
+            <div class="vertical-line"></div>
+
+            <div>
+                <p>100836</p>
+                <p>Different users</p>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <div>
+                <p>100836</p>
+                <p>Different users</p>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="team">
-        <h1 style="padding-bottom: 10px;">Our Lovely Team:</h1>
+    <div class="team item" id="four">
+
+        <h1 class="our-team">Our Lovely Team</h1>
 
         <div class="team-mates">
-            <img class="logo" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
-            <img class="logo" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
-            <img class="logo" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
-            <img class="logo" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
-        </div>
-    </div>
-
-
-    <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span></span>Copyright © SAM.N Website 2020</span>
+            <div class="profile">
+                <img class="person" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
+                <p class="name">Sami imran</p>
+                <p class="major">Software Developer</p>
             </div>
+            <div class="profile">
+                <img class="person" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
+                <p class="name">Sami imran</p>
+                <p class="major">Software Developer</p>
+
+            </div>
+            <div class="profile">
+                <img class="person" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
+                <p class="name">Sami imran</p>
+                <p class="major">Software Developer</p>
+
+            </div>
+            <div class="profile">
+                <img class="person" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
+                <p class="name">Sami imran</p>
+                <p class="major">Software Developer</p>
+
+            </div>
+
         </div>
-    </footer>
+
+
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span></span>Copyright © SAM.N Website 2020</span>
+                </div>
+            </div>
+            <a id="to_Top" href="#one">
+                <div class="to-Top">TOP</div>
+            </a>
+        </footer>
 
 
 </body>
