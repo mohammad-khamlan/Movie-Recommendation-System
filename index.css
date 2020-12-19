@@ -1,7 +1,13 @@
+body{
+    width: 100%;
+    height: 100%;
+    font-family:sans-serif;
+}
+
 .first-div{
     background-image: url('films\ webbage\ 2.jpg');
     width: 100%;
-    height: 1240px;
+    height: 955px;
     background-size:100% 100% ;
 }
 
@@ -9,8 +15,14 @@
     width: 30%;
 }
 
+#submit{
+    margin-top: 1.6%;
+    width: 10%;
+    border-radius: 5%;
+}
+
 #text-first-div{
-    padding: 16% 11%;
+    padding: 14% 11%;
     line-height: 2;
     font-weight: bold;
     font-size: 12rem;
@@ -19,10 +31,28 @@
     flex-direction: column;
 }
 
-#main-msg{
-    font-size: 3.1rem;
+
+#main-msg1{
+    font-size: 1.6rem;
     line-height: 1.3;
-    font-family:sans-serif;
+    font-family:'sans-serif';
+    color: #fffa76;
+    width: fit-content;
+}
+
+#main-msg2{
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-family:'sans-serif';
+    color: #f5f4dc;
+    width: fit-content;
+    margin-left:0.65rem;
+}
+
+#main-msg3{
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-family:'sans-serif';
     color: #f5f4dc;
     width: fit-content;
 }
@@ -41,29 +71,11 @@
 .logo-div{
     padding:60px;
 }
-
+/*
 h2,h3,h4,h5,h6,p,li{
     font-weight: bold;
     font-size: 1.6rem;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.div-form{
-    width: 100%;
-    height: 500px;
-    background-color: #F3E9E9;
-    display: flex;
-    justify-content: center;
-}
-
-.icons{
-    padding: 50px 45px;
-}
-
-.requirements{
-    padding-top: 5px;
-    color: green;
-}
+}*/
 
 .all-icons{
     display: flex;
@@ -77,19 +89,25 @@ h2,h3,h4,h5,h6,p,li{
 }
 
 .vertical-line{
-    border-left: 2px solid black;
-    height: 60%;
+    border-left: 2px solid #abbcdb;
     margin: 4.3%;
 }
 
 .aboutUs-div{
     width: 100%;
-    height: 150%;
-    background-color: #39B54A;
+    height: 600px;
     text-align: center;
     padding-top: 45px;
-    color: white;
-    word-spacing: 8px;
+    color: black;
+    word-spacing: 2%;
+    background-color: #f3f3f3;
+}
+
+.pic{
+    width: 70%;
+    height: 70%;
+    margin-top: 8%;
+    border-radius: 3%;
 }
 
 .para{
@@ -101,13 +119,12 @@ h2,h3,h4,h5,h6,p,li{
 }
 
 #numbers{
-    display: flex;
-    justify-content: center;
     padding-top: 16%;
-    align-items: center;
     font-size: 3.3rem;
     color: black;
-    line-height: 3;
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
 }
 
 .team{
@@ -121,8 +138,10 @@ h2,h3,h4,h5,h6,p,li{
 }
 
 .our-team{   /* text */
-    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-bottom: 6%;
     text-align: center;
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
 }
 
 .team-mates, .names{   /* div contains team photos*/
@@ -147,60 +166,12 @@ h2,h3,h4,h5,h6,p,li{
     font-weight: 400;
 }
 
-
-h1,h2,h3,h4,h5,h6,a{
-  margin:0;
-}
-
-a{
-  color: inherit;
-}
-
-nav {
-    padding-top: 3%;
-    float: left;
-    width: fit-content;
-    position: fixed;
-}
-
-.container {
-  text-align: right;
-}
-
-.container ul li {
-  list-style: none;
-  display: inline-block;
-}
-
-.container ul li a:hover {
-  padding: 12px;
-  color: #fc0;
-}
-
-.container ul li a {
-  padding: 10px;
-  color: white;
-  font-size: 1.2em;
-  text-decoration: none;
-}
-
-.container p{
-color: #fc0;
-font-weight: 700;
-font-size: 20px;
-}
-
-#to_top{
-    position: fixed;
-    padding-right: 10%;
-}
-
 .name{
     color: #707070;
-    font-weight: 400;
+    font-weight: 800;
 }
 
 .major{
     color: #00FF3C;
-    font-weight: 450;
+    font-weight: 600;
 }

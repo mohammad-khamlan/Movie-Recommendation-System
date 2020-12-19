@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAM.N</title>
-
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
 
-    <link rel="stylesheet" href="index.css">
+
+
     <script src="index.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js">
@@ -24,13 +29,6 @@
         $("#sec-1").click(function () {
             $('html, body').animate({
                 scrollTop: $("#one").offset().top - 66
-            }, 1000);
-            return false;
-        });
-
-        $("#sec-2").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#two").offset().top - 112
             }, 1000);
             return false;
         });
@@ -55,36 +53,34 @@
 </head>
 
 <body onload="bright()">
-    <div class="first-div default first item" id="one">
-        <nav>
-            <div class="container">
-                <ul>
-                    <li><a id="sec-1" href="#one">Home</a></li>
-                    <li><a id="sec-2" href="#two">Use The system</a></li>
-                    <li><a id="sec-3" href="#three">About Us</a></li>
-                    <li><a id="sec-4" href="#four">Staff</a></li>
-                </ul>
-            </div>
-        </nav>
+    <div class="first-div" id="one">
 
         <div id="text-first-div">
-            <h1 class="first-header" id="main-msg">
-                Discover
-                new movies<br>
-                in one step.
+
+            <div>
+                <h1 class="message" id="main-msg1" style="font-size: 3rem; float: left;">
+                    Discover
+                </h1>
+                <h1 class="message" id="main-msg2" style="font-size: 3rem; float: left;">
+                    new movies
+                </h1>
+            </div>
+
+
+            <h1 class="message" id="main-msg3" style="font-size: 3rem; float: left;">
+                in one step
             </h1>
 
             <div class="in">
                 <form method="POST">
-                    <p>Find a perfect match to your mood</p>
+                    <p style="font-size: large;">Just enter the userID </p>
                     <input class="form-control form-control-lg" type="number" placeholder="userID" id="userID">
                 </form>
             </div>
+            <button class="btn btn-secondary" type="submit" id="submit">Submit </button>
 
             <div class="answer">
-
             </div>
-
 
         </div>
 
@@ -95,56 +91,62 @@
     <!--
         About us
     -->
-    <div class="aboutUs-div item " id="three">
+    <div class="aboutUs-div item row" id="three">
         <!--
             this div for header
         -->
-        <div>
-            <p> Hello There
-                <br>
-                We Are I Recommend
-            </p>
+        <div class="col-6" id="pic">
+            <img class="pic" src="whoareweart.jpg">
         </div>
 
-        <!--
+        <div class="col-6" id="the-text">
+            <div>
+                <p style="font-size: x-large; font-weight: bold;"> Hello There In
+                    <br>
+                    MOVAI
+                </p>
+            </div>
+
+            <!--
             this div for the paragraph
         -->
-        <div class="row">
-            <p class="para">
-                I Recommend is website to give you
-                <br>
-                recommendations for movies you've watched,
-                <br>
-                using machine learning algorithms and big data principles,
-                <br>
-                we came out with this website.
-                Our data set consists of over than 27,000,000 rows and 6
-                columns:
-            </p>
-        </div>
-        <!--
+            <div class="row">
+                <p class="para"
+                    style="font-size:x-large; font-weight: 500; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    MOVAI is website to give you recommendations
+                    <br>
+                    for movies you've watched, using
+                    <br>
+                    machine learning algorithms and big data principles,
+                    <br>
+                    we came out with this website.
+                    Our data set consists of over than 27,000,000 rows and 6
+                    columns:
+                </p>
+            </div>
+            <!--
             This div for nubmers to show about the data
         -->
-        <div id="numbers" class="row">
-            <div>
-                <p>100836</p>
-                <p>Different users</p>
+            <div id="numbers" class="row" style="font-size: 1.3rem;font-weight: 600;">
+                <div>
+                    <p>100836</p>
+                    <p>Different users</p>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <div>
+                    <p>9780</p>
+                    <p>Different movies</p>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <div>
+                    <p>100836</p>
+                    <p>Different ratings</p>
+                </div>
             </div>
-
-            <div class="vertical-line"></div>
-
-            <div>
-                <p>100836</p>
-                <p>Different users</p>
-            </div>
-
-            <div class="vertical-line"></div>
-
-            <div>
-                <p>100836</p>
-                <p>Different users</p>
-            </div>
-
         </div>
 
     </div>
@@ -161,21 +163,20 @@
             </div>
             <div class="profile">
                 <img class="person" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
-                <p class="name">Sami imran</p>
-                <p class="major">Software Developer</p>
+                <p class="name">Mohammad Khamlan</p>
+                <p class="major">AI specialist</p>
 
             </div>
             <div class="profile">
                 <img class="person" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
-                <p class="name">Sami imran</p>
-                <p class="major">Software Developer</p>
+                <p class="name">Abdallah Saleh</p>
+                <p class="major">AI specialist</p>
 
             </div>
             <div class="profile">
                 <img class="person" src="C:\Users\hp\Desktop\Sami On Tree.jpg">
-                <p class="name">Sami imran</p>
-                <p class="major">Software Developer</p>
-
+                <p class="name">Noha Thaher</p>
+                <p class="major">AI specialist</p>
             </div>
 
         </div>
@@ -186,10 +187,7 @@
                 <div class="copyright text-center my-auto">
                     <span></span>Copyright © SAM.N Website 2020</span>
                 </div>
-            </div>
-            <a id="to_Top" href="#one">
-                <div class="to-Top">TOP</div>
-            </a>
+
         </footer>
 
 
