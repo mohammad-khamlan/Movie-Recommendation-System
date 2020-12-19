@@ -37,8 +37,9 @@ def predict_movies(als_model, test_data, user_id):
 
 
 if __name__ == '__main__':
+    # load ALS model to use
     als_model = ALSModel.load('als_model2')
+    # predict movies for given user
     recommended_movies = predict_movies(als_model, test_data, 318)
-    print(recommended_movies)
     app.run(debug=True)
 
