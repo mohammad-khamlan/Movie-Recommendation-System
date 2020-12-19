@@ -1,0 +1,191 @@
+body{
+    width: 100%;
+    height: 100%;
+    font-family:sans-serif;
+}
+
+.first-div{
+    background-image: url('films\ webbage\ 2.jpg');
+    width: 100%;
+    height: 955px;
+    background-size:100% 100% ;
+}
+
+#userID{
+    width: 30%;
+}
+
+#submit{
+    margin-top: 1.6%;
+    width: 10%;
+    border-radius: 5%;
+}
+
+#text-first-div{
+    padding: 14% 11%;
+    line-height: 2;
+    font-weight: bold;
+    font-size: 12rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#main-msg1{
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-family:'sans-serif';
+    color: #fffa76;
+    width: fit-content;
+}
+
+#main-msg2{
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-family:'sans-serif';
+    color: #f5f4dc;
+    width: fit-content;
+    margin-left:0.65rem;
+}
+
+#main-msg3{
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-family:'sans-serif';
+    color: #f5f4dc;
+    width: fit-content;
+}
+
+.in{
+    padding-top: 3%;
+}
+
+.logo{
+    border-radius: 50%;
+    width: 8.4rem;
+    height: 8.4rem;
+    margin: 0 auto 1.2rem;
+}
+
+.logo-div{
+    padding:60px;
+}
+/*
+h2,h3,h4,h5,h6,p,li{
+    font-weight: bold;
+    font-size: 1.6rem;
+}*/
+
+.all-icons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.horizontal-line{
+    background-color: #00aeef;
+    width: 65px;
+    height: 4px;
+}
+
+.vertical-line{
+    border-left: 2px solid #abbcdb;
+    margin: 4.3%;
+}
+
+.aboutUs-div{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    padding-top: 45px;
+    color: black;
+    word-spacing: 2px;
+    background-color: #f3f3f3;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.pic{
+    width: 70%;
+    height: 75%;
+    margin-top: 7%;
+    border-radius: 3%;   
+}
+
+.about{
+    font-size: 36px;
+    padding-top: 6%;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #333333;
+    display: flex;
+}
+
+.para{
+    text-align: left;
+    float: left;
+    padding-top: 7%;
+    line-height: 1.68;
+    font-size:x-large; 
+    font-weight: 400;
+}
+
+#numbers{
+    padding-top: 6%;
+    padding-right: 6%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: black;
+    line-height: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.team{
+    padding-top: 10%;
+    width: 100%;
+    height: 60%;
+    background-image: url("https://wac-cdn.atlassian.com/dam/jcr:6db86e6a-a05c-414c-a3e9-58db75bce1bb/left_bottom_hero.png?cdnVersion=1376"),url("https://wac-cdn.atlassian.com/dam/jcr:42a7d2a5-669b-44c9-8980-9f83600ab4d9/right_bottom_hero.png?cdnVersion=1376");
+    background-position: bottom left,bottom right;
+    background-repeat: no-repeat,no-repeat;
+    background-size: 600px 300px, 600px 300px;
+}
+
+.our-team{   /* text */
+    padding-top: 3%;
+    padding-bottom: 6%;
+    text-align: center;
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+}
+
+.team-mates, .names{   /* div contains team photos*/
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8%;
+}
+
+.person{   /* the photos */ 
+    border-radius: 50%;
+    width: 8.4rem;
+    height: 8.4rem;
+    margin-left:7.3%;
+    margin-right: 3%;
+}
+
+.profile{
+    padding:3%;
+    font-family:  "Nunito Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.name{
+    color: #707070;
+    font-weight: 800;
+}
+
+.major{
+    color: #00FF3C;
+    font-weight: 600;
+}
