@@ -168,6 +168,7 @@ body{
 }
 
 .major{
+<<<<<<< HEAD:WebWork/index.css
     color: white;
     font-weight: 700;
 }
@@ -176,3 +177,8 @@ body{
     width: 50%;
     height: 50%;
 }
+=======
+    color: #00FF3C;
+    font-weight: 600;
+}
+>>>>>>> 4f98b1b94896b2f74e0954058ae70c2ec61ef862:index.css
