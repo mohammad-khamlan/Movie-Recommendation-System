@@ -84,7 +84,7 @@ h2,h3,h4,h5,h6,p,li{
 
 .horizontal-line{
     background-color: #00aeef;
-    width: 70px;
+    width: 65px;
     height: 4px;
 }
 
@@ -99,32 +99,46 @@ h2,h3,h4,h5,h6,p,li{
     text-align: center;
     padding-top: 45px;
     color: black;
-    word-spacing: 2%;
+    word-spacing: 2px;
     background-color: #f3f3f3;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 .pic{
     width: 70%;
-    height: 70%;
-    margin-top: 8%;
-    border-radius: 3%;
+    height: 75%;
+    margin-top: 7%;
+    border-radius: 3%;   
+}
+
+.about{
+    font-size: 36px;
+    padding-top: 6%;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #333333;
+    display: flex;
 }
 
 .para{
     text-align: left;
     float: left;
-    padding-left: 6%;
-    padding-top: 3%;
+    padding-top: 7%;
     line-height: 1.68;
+    font-size:x-large; 
+    font-weight: 400;
 }
 
 #numbers{
-    padding-top: 16%;
-    font-size: 3.3rem;
+    padding-top: 6%;
+    padding-right: 6%;
+    font-size: 1.3rem;
+    font-weight: 600;
     color: black;
     line-height: 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .team{
