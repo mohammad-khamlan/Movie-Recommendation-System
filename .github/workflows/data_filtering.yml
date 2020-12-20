@@ -42,6 +42,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "data-filtering"
           heroku_email: "mohammad.khamlan@stu.najah.edu"
+          appdir: "./data_filtering"  
           usedocker: 1
           dontuseforce: 1
 
