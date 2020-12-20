@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAM.N</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/static/index.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,7 +19,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <script src="index.js"></script>
+    <script src="/static/index.js"></script>
 
 </head>
 
@@ -30,7 +30,7 @@
     this div contains the logo
         -->
         <div class="div-logo">
-            <img src="assets/logooo.png" id="logo">
+            <img src="/static/assets/logooo.png" id="logo">
         </div>
 
         <div class="text">
@@ -56,12 +56,12 @@
             </div>
 
             <div class="in">
-                <form method="POST">
+                <form action = "/predict" method="POST">
                     <p style="font-size: large;">Just enter the userID </p>
-                    <input class="form-control form-control-lg" type="number" placeholder="userID" id="userID">
+                    <input class="form-control form-control-lg" type="number" placeholder="userID" id="userID" name = "user">
+                    <button class="btn btn-warning" type="submit" id="submit" value="submit" onclick="getDiv()">Submit </button>
                 </form>
             </div>
-            <button class="btn btn-warning" type="submit" id="submit" onclick="getDiv()">Submit </button>
 
             <div id="answer">
                 <ol id="list-movies"></ol>
@@ -80,7 +80,7 @@
             this div for header
         -->
         <div class="col-6" id="pic">
-            <img class="pic" src="assets/whoareweart.jpg">
+            <img class="pic" src="/static/assets/whoareweart.jpg">
         </div>
 
         <div class="col-6" id="the-text">
@@ -143,28 +143,28 @@
 
         <div class="team-mates row">
             <div class="col-sm-3 profile">
-                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/Sami@Hult.JPG"
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="/static/assets/Sami@Hult.JPG"
                     data-holder-rendered="true">
                 <h2 class="name">Sami Imran</h2>
                 <h3 class="major">Software developer</h2>
             </div>
 
             <div class="col-sm-3 profile">
-                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/Mohammad.jpeg"
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="/static/assets/Mohammad.jpeg"
                     data-holder-rendered="true">
                 <h2 class="name">Mohammad Khamlan</h2>
                 <h3 class="major">Ai specialist</h2>
             </div>
 
             <div class="col-sm-3 mb-1 profile">
-                <img class="rounded-circle z-depth-2 person " alt="50x50" src="assets/Abdallah.jpeg"
+                <img class="rounded-circle z-depth-2 person " alt="50x50" src="/static/assets/Abdallah.jpeg"
                     data-holder-rendered="true">
                 <h2 class="name">Abdallah Saleh</h2>
                 <h3 class="major">Ai specialist</h2>
             </div>
 
             <div class="col-sm-3 profile">
-                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/Noha.jpeg"
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="/static/assets/Noha.jpeg"
                     data-holder-rendered="true">
                 <h2 class="name">Noha Thaher</h2>
                 <h3 class="major">Ai specialist</h2>

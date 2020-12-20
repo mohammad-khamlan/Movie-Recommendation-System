@@ -5,13 +5,16 @@ import sklearn
 from pyspark.ml.recommendation import ALSModel
 from pyspark.sql import SparkSession
 import itertools
+import json
 
 app = Flask(__name__)
 
 spark = SparkSession.builder.appName('Recommendation_system').getOrCreate()
-test_data = pd.read_csv("recommendation_test_data.csv")
 
-def predict_movies(als_model, test_data, user_id):
+# load ALS model to use
+als_model = ALSModel.load('als_model2')
+
+def predict_movies(user_id):
     """
     predict movies id's for given user
     :Args:
@@ -21,7 +24,7 @@ def predict_movies(als_model, test_data, user_id):
     :return: list of recommended movies id's
     """
     #test_data = test_data[test_data["userId"] == uid]
-
+    test_data = pd.read_csv("recommendation_test_data.csv")
     # convert pandas dataframe to pyspark dataframe
     test_data = spark.createDataFrame(test_data) 
     # predict movies fo all users using als model
@@ -31,15 +34,23 @@ def predict_movies(als_model, test_data, user_id):
     # sort values in dataframe by prediction
     prediction = prediction.sort_values(by='prediction', ascending=False)
     # select highest predict rating and return it's movie id
-    prediction = prediction[prediction["userId"] == user_id]["movieId"].head()
+    prediction = prediction[prediction["userId"] == user_id]["movieId"].head().tolist()
     return prediction
 
+@app.route('/predict' , methods=['GET' ,'POST'])
+def get_user_id():
+    if request.method == "POST" :
+        user_id = request.get_json()['id']
+        prediction = predict_movies(user_id)
+        prediction = json.dumps(prediction)
+        return prediction
 
+    elif request.method == "GET" :
+        user_id = int(request.args.get('id'))
+        prediction = predict_movies(user_id)
+        prediction = json.dumps(prediction)
+        return prediction
 
 if __name__ == '__main__':
-    # load ALS model to use
-    als_model = ALSModel.load('als_model2')
-    # predict movies for given user
-    recommended_movies = predict_movies(als_model, test_data, 318)
     app.run(debug=True)
 
