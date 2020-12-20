@@ -1,13 +1,13 @@
-from flask import Flask
+from flask import Flask, request
 from pymongo import MongoClient
 import pymongo
 import pandas as pd
+import json
+import argparse 
 
 
 app = Flask(__name__)
-
-# read csv file wich contain data 
-data = pd.read_csv("data.csv")
+collection = 0
 
 def connect_to_mongo():
   """
@@ -22,7 +22,7 @@ def connect_to_mongo():
   return collection
 
 
-def getTitle(list_moviesId, collection):
+def get_title(list_moviesId):
   """
   retrieve movies titles 
   :Args:
@@ -44,12 +44,24 @@ def getTitle(list_moviesId, collection):
   return movies_titles
     
 
+@app.route('/titles' , methods=['GET' ,'POST'])
+def take_parameters():
+  if request.method == "POST" :
+    movies_ids = request.get_json()['ids']
+    movies_titles = get_title(movies_ids)
+    movies_titles = json.dumps(movies_titles) 
+    return movies_titles
+
+  elif request.method == "GET" :
+    movies_ids = list(map(int,request.args.getlist('ids')))
+    movies_titles = get_title(movies_ids)
+    movies_titles = json.dumps(movies_titles)
+    return movies_titles
+
 
 if __name__ == '__main__':
   # connec to mongoDB database and collection
   collection = connect_to_mongo()
-  # retrieve movies titles for given movies id's
-  movies_titles = getTitle(movies_ids, collection)
   app.run(debug=True)
 
 
