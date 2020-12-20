@@ -6,6 +6,7 @@ from pyspark.ml.recommendation import ALSModel
 from pyspark.sql import SparkSession
 import itertools
 import json
+import os
 
 app = Flask(__name__)
 
@@ -52,5 +53,6 @@ def get_user_id():
         return prediction
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 4999))
+    app.run(host = '0.0.0.0', debug=True, port = port)
 
