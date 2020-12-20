@@ -1,12 +1,8 @@
-function bright() {
-    var h1 = document.createElement("h1");
+function getDiv() {
+    var div = document.getElementById('answer');
+    var list = document.getElementById('list-movies');
 
-    h1.setAttribute("style",
-        "font-family: 'sans - serif';\
-        color:#fffa76;\
-        float:left;");
-    h1.style.fontSize = '1.6rem';
-    h1.style.lineHeight = '1.3';
+    div.style.visibility = 'visible';
 
-    document.getElementById('main-msg1') = h1;
+
 }

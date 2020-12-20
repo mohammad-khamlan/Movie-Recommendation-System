@@ -61,9 +61,10 @@
                     <input class="form-control form-control-lg" type="number" placeholder="userID" id="userID">
                 </form>
             </div>
-            <button class="btn btn-warning" type="submit" id="submit">Submit </button>
+            <button class="btn btn-warning" type="submit" id="submit" onclick="getDiv()">Submit </button>
 
-            <div class="answer">
+            <div id="answer">
+                <ol id="list-movies"></ol>
             </div>
         </div>
         <!--
@@ -142,14 +143,14 @@
 
         <div class="team-mates row">
             <div class="col-sm-3 profile">
-                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/sami.jpg"
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/Sami@Hult.JPG"
                     data-holder-rendered="true">
                 <h2 class="name">Sami Imran</h2>
                 <h3 class="major">Software developer</h2>
             </div>
 
             <div class="col-sm-3 profile">
-                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/mohammad.jpeg"
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/Mohammad.jpeg"
                     data-holder-rendered="true">
                 <h2 class="name">Mohammad Khamlan</h2>
                 <h3 class="major">Ai specialist</h2>
@@ -163,7 +164,7 @@
             </div>
 
             <div class="col-sm-3 profile">
-                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/noobAbdallah.jpg"
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="assets/Noha.jpeg"
                     data-holder-rendered="true">
                 <h2 class="name">Noha Thaher</h2>
                 <h3 class="major">Ai specialist</h2>
