@@ -10,6 +10,8 @@ import os
 
 app = Flask(__name__)
 
+os.environ['JAVA_HOME'] = '/usr/lib/jvm/java-8-openjdk-amd64/'
+
 spark = SparkSession.builder.appName('Recommendation_system').getOrCreate()
 
 # load ALS model to use
