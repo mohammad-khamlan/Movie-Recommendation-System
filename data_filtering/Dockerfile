@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000/tcp
 EXPOSE 5000/udp
 
-CMD ["python", "./inserting_data_final.py"]
+CMD ["python3", "./inserting_data.py"]
