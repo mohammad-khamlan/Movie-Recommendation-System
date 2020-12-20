@@ -4,10 +4,24 @@ body{
     font-family:sans-serif;
 }
 
-#logo{
-    width: 20%;
-    height: 30%;
-    border-radius: 50%;
+.div-logo {
+    width: 50%;
+    height: 23%;
+}
+
+#logo {
+    width: 17%;
+    height: 65%;
+    margin-bottom: 35%;
+    margin-left: -15%;
+}
+
+
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+
 }
 
 .first-div{
@@ -16,7 +30,7 @@ body{
     height: 955px;
     background-size:100% 100% ;
 
-    padding:  11%;
+    padding:1%  11%;
     line-height: 2;
     font-weight: bold;
     font-size: 12rem;
@@ -55,9 +69,6 @@ body{
     margin-top: 1.6%;
     width: 10%;
     border-radius: 5%;
-}
-
-.in{
 }
 
 .all-icons{
@@ -125,24 +136,25 @@ body{
 
 .team{
     padding-top: 10%;
-    width: 100%;
+    width: 99.8%;
     height: 100%;
     background-size: 100% 100%;
     background-image: url("assets/background\ 1.jpg");
 }
 
 .our-team{   /* text */
-    padding-top: 3%;
-    padding-bottom: 6%;
+    padding-top: 1%;
+    padding-bottom: 4%;
     text-align: center;
     font-family: 'Verdana, Geneva, Tahoma, sans-serif';
     color: white;
+    font-size: 4.6rem;
+    font-weight: 400;
 }
 
-.team-mates, .names{   /* div contains team photos*/
+.team-mates, .names{   /* div contains team photos */
     display: flex;
     justify-content: center;
-    padding-bottom: 8%;
 }
 
 .profile{
@@ -156,29 +168,24 @@ body{
 
 .person{   /* the photos */ 
     border-radius: 50%;
-    width: 12rem;
-    height: 12rem;
+    width: 18rem;
+    height: 18rem;
     margin-left:7.3%;
     margin-right: 3%;
 }
 
 .name{
-    color: #fff9b8;
-    font-weight: 800;
+    padding-top: 5%;
+    color: aliceblue;
 }
 
 .major{
-<<<<<<< HEAD:WebWork/index.css
-    color: white;
-    font-weight: 700;
+    padding-top: 2%;
+    color: rgb(77, 240, 186);
 }
 
-.pe{
+.copy{
+    align-items: center;
     width: 50%;
-    height: 50%;
+    margin: auto;
 }
-=======
-    color: #00FF3C;
-    font-weight: 600;
-}
->>>>>>> 4f98b1b94896b2f74e0954058ae70c2ec61ef862:index.css
