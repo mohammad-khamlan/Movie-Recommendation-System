@@ -4,7 +4,7 @@ import pymongo
 import pandas as pd
 import json
 import argparse 
-
+import os
 
 app = Flask(__name__)
 collection = 0
@@ -62,6 +62,7 @@ def take_parameters():
 if __name__ == '__main__':
   # connec to mongoDB database and collection
   collection = connect_to_mongo()
-  app.run(debug=True)
+  port = int(os.environ.get('PORT', 5000))
+  app.run(host = '0.0.0.0', debug=True, port = port)
 
 
