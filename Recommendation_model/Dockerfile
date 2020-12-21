@@ -7,7 +7,7 @@ RUN apk update \
 && apk add --no-cache curl \
 && apk add --no-cache openjdk8-jre
 
-RUN apk add --no-cache python3 py3-pip3
+RUN apk add --no-cache python3 world[py3-pip3]
 
 WORKDIR /app
 ADD . /app
