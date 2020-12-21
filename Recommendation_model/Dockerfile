@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:3.7-alpine
 
 RUN apk update \
 && apk upgrade \
@@ -10,9 +10,8 @@ RUN apk update \
 WORKDIR /app
 ADD . /app
 
-RUN apk update && apk add python3-dev \
-                        gcc \
-                        libc-dev
+RUN apk update && apk add gcc libc-dev make git libffi-dev openssl-dev python3-dev libxml2-dev libxslt-dev 
+
 
 RUN pip install --no-cache-dir -r requirements.txt
 
