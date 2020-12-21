@@ -20,10 +20,10 @@ rm -r /root/.cache
 WORKDIR /app
 ADD . /app
 
-RUN pip3 install --no-cache-dir -r /Recommendation_model/requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk" 
 EXPOSE 5000/tcp
 EXPOSE 5000/udp
 
-CMD ["python3", "/Recommendation_model/movie_recommendation.py"]
+CMD ["python3", "movie_recommendation.py"]
