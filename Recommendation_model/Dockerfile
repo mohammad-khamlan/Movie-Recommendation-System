@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM python:3.6-slim
 
 WORKDIR /app
 COPY . ./app
@@ -8,13 +8,6 @@ RUN \
 apt-get update && \
 apt-get install -y openjdk-14-jdk && \
 rm -rf /var/lib/apt/lists/*
-
-# Install Python
-RUN \
-apt-get update && \
-apt-get install -y python python-dev python-pip && \
-rm -rf /var/lib/apt/lists/*
-
 
 RUN pip install --no-cache-dir -r ./app/Recommendation_model/requirements.txt
 
