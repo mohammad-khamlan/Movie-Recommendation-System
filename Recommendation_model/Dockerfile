@@ -21,7 +21,7 @@ WORKDIR /app
 ADD . /app
 
 #RUN pip3 install --no-cache-dir -r requirements.txt
-RUN pwd
+RUN cd Recommendation_model && ls
 
 ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk" 
 EXPOSE 5000/tcp
