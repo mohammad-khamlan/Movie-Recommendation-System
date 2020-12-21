@@ -13,8 +13,9 @@ Customer should enter user id for user who want to predict for it, then the
 to predict a movies for given user id in the website.
 
 ## Movie Based 
-At the first we normalized the data ,then we used user-user based to create a matrix contain users and the simelarity between them. After that we send the userid to function return the top 10 similar users to the user which we are predicting to him.
+At the first we normalized the data ,then we used user-user based to create a matrix contain users and the simelarity between them. After that we send the userid to function return the top 10 similar users, to the user which we are predicting to.
 
-Then we create another matrix between users-movies(rows-columns) , this matris wil contain the normalized rating for each movie by each user and we filled the zeros by the mean for columns. At the fainal we bring all movies with it's rating for the user which we are predicting to him and removed the watched movies to let the difference between all the movies and the movies that have been watched be the final result .
+Then we create another matrix between users-movies(indexes-columns) , this matrix contains the normalized rating for each movie by each user and we filled the zeros by the mean of columns. At the end we bring all movies with it's rating for the user which we are predicting to, and removed the watched movies to let the difference between all the movies and the movies that have been watched be the final result.
 
-
+## Evaluation
+We have evaluated each approach we built, **ALS model based** has accurecy **91%** for **15** users as test data, and **Movie based** has accurecy **99%** for **1** user as test data.
