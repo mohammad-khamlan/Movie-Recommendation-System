@@ -1,5 +1,5 @@
 FROM python:3.6-slim
-WORKDIR ./Recommendation_model
+WORKDIR ./Final_project/Recommendation_model
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
