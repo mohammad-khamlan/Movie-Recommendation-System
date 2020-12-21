@@ -20,7 +20,8 @@ rm -r /root/.cache
 WORKDIR /app
 ADD . /app
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+#RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pwd
 
 ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk" 
 EXPOSE 5000/tcp
