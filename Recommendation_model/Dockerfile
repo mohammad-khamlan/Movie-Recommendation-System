@@ -17,12 +17,12 @@ if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
 rm -r /root/.cache
 
 
-WORKDIR /app
-COPY . ./app
+WORKDIR /Recommendation_model
+COPY . .
 
-RUN pip install --no-cache-dir -r ./app/Recommendation_model/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000/tcp
 EXPOSE 5000/udp
 
-CMD ["python3", "./app/Recommendation_model/movie_recommendation.py"]
+CMD ["python3", "./Recommendation_model/movie_recommendation.py"]
