@@ -6,7 +6,7 @@ COPY . ./app
 # Install OpenJDK 8
 RUN \
 apt-get update && \
-apt-get install -y openjdk-14-jdk && \
+apt-get install -y openjdk-8-jdk && \
 rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir -r ./app/Recommendation_model/requirements.txt
