@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM python:3
 WORKDIR Final Project/Recommendation_model
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
