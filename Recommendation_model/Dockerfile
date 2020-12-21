@@ -1,16 +1,24 @@
-FROM python:3.6-slim
+FROM ubuntu:latest
 
-WORKDIR Final_project/Recommendation_model
-COPY . .
+WORKDIR /app
+COPY . ./app
 
-RUN apt-get update -qq
-RUN apt-get install -y openjdk-8-jdk
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-RUN export JAVA_HOME
+# Install OpenJDK 8
+RUN \
+apt-get update && \
+apt-get install -y openjdk-14-jdk && \
+rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Python
+RUN \
+apt-get update && \
+apt-get install -y python python-dev python-pip && \
+rm -rf /var/lib/apt/lists/*
+
+
+RUN pip install --no-cache-dir -r ./app/Recommendation_model/requirements.txt
 
 EXPOSE 5000/tcp
 EXPOSE 5000/udp
 
-CMD ["python3", "movie_recommendation.py"]
+CMD ["python3", "./app/Recommendation_model/movie_recommendation.py"]
