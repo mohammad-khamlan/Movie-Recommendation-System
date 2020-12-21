@@ -10,6 +10,10 @@ RUN apk update \
 WORKDIR /app
 ADD . /app
 
+RUN apk update && apk add python3-dev \
+                        gcc \
+                        libc-dev
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk" 
