@@ -4,6 +4,8 @@ import pandas as pd
 import sklearn
 from pyspark.ml.recommendation import ALSModel
 from pyspark.sql import SparkSession
+from py4j.java_gateway import java_import, JavaGateway, GatewayClient
+from pyspark.find_spark_home import _find_spark_home
 import itertools
 import json
 import os
