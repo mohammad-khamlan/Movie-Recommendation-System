@@ -17,11 +17,12 @@ if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
 rm -r /root/.cache
 
 
-WORKDIR /Recommendation_model
-COPY . .
+WORKDIR /app
+ADD . /app
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r ./Recommendation_model/requirements.txt
 
+ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk" 
 EXPOSE 5000/tcp
 EXPOSE 5000/udp
 
