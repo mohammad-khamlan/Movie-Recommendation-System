@@ -4,20 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAM.N</title>
+    <title>MOVAI</title>
+
     <link rel="stylesheet" href="/static/index.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 
     <script src="/static/index.js"></script>
 
@@ -56,16 +48,34 @@
             </div>
 
             <div class="in">
-                <form action = "/predict" method="POST">
-                    <p style="font-size: large;">Just enter the userID </p>
-                    <input class="form-control form-control-lg" type="number" placeholder="userID" id="userID" name = "user">
-                    <button class="btn btn-warning" type="submit" id="submit" value="submit" onclick="getDiv()">Submit </button>
+                <p style="font-size: large;">Just enter the userID </p>
+                <form method="POST" autocomplete="off" action="/predict">
+                    <input class="form-control form-control-lg" type="number" placeholder="userID" id="userID"
+                        name="user">
+
+                    <button class="btn btn-warning" type="submit" id="submit" onclick="getDiv()"
+                        style="float: left;"><b>Submit</b>
+                    </button>
+
+                    <button class="btn btn-danger" type="reset" id="submit" onclick="clean()"
+                        style="float: left;"><b>Reset</b>
+                    </button>
                 </form>
             </div>
 
+
             <div id="answer">
-                <ol id="list-movies"></ol>
+                <div id="lable">
+                    <p id="results">
+                        Recommended Movies:
+                    </p>
+                </div>
+
+                <div id="movie-divs">
+                    <ol id="list-movies"></ol>
+                </div>
             </div>
+
         </div>
         <!--
         end of the first div
@@ -86,7 +96,7 @@
         <div class="col-6" id="the-text">
             <div>
                 <h2 class="about">
-                    About Us
+                    About MOVAI
                 </h2>
                 <div class="horizontal-line">
                 </div>
@@ -97,7 +107,7 @@
         -->
             <div class="row">
                 <p class="para">
-                    MOVAI is website to give you recommendations
+                    MOVAI is a web page to give you recommendations
                     <br>
                     for movies you've watched, using
                     <br>
@@ -138,10 +148,10 @@
     <!--
         team div
     -->
-    <div class="team item" id="four">
+    <div class="team item">
         <h1 class="our-team">Our Lovely Team</h1>
 
-        <div class="team-mates row">
+        <div class="team-mates">
             <div class="col-sm-3 profile">
                 <img class="rounded-circle z-depth-2 person" alt="50x50" src="/static/assets/Sami@Hult.JPG"
                     data-holder-rendered="true">

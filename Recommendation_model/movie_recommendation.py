@@ -6,6 +6,7 @@ from pyspark.ml.recommendation import ALSModel
 from pyspark.sql import SparkSession
 import itertools
 import json
+import os
 
 app = Flask(__name__)
 
