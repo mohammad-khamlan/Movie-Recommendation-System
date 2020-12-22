@@ -9,7 +9,7 @@ and return a recommended movies for user to watch. We used **ALS** model based t
 You have to go to the website by the link in Service link, you will enter any userID the website will make the calculation and return the Recommended movies titles,
 
 ## Statistics
-In our dataset we have 610 users,9742 movies, 100836 ratings. after we analyise this data set we came up with----------:
+In our dataset we have 610 users,9742 movies, 100836 ratings. after we analyise we came up with a results that yo will find in analysis.py file.
 
 ## ALS Model Based
 **Alternating Least Square(ALS)** is a matrix factorization algorithm and it runs itself in parallel fashion. We used ALS from pyspark library and train a model 
