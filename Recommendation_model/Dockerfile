@@ -12,6 +12,10 @@ ADD . /app
 
 RUN apk update && apk add gcc libc-dev make git libffi-dev openssl-dev python3-dev libxml2-dev libxslt-dev 
 
+RUN apk update
+RUN apk --no-cache add curl gcc g++
+RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
+
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
