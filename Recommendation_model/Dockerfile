@@ -12,7 +12,6 @@ ADD . /app
 
 RUN apk update && apk add gcc libc-dev make git libffi-dev openssl-dev python3-dev libxml2-dev libxslt-dev 
 
-RUN pip install --update --no-cache numpy pandas
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
