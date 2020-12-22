@@ -21,4 +21,4 @@ At the first we normalized the data ,then we used user-user based to create a ma
 Then we create another matrix between users-movies(indexes-columns) , this matrix contains the normalized rating for each movie by each user and we filled the zeros by the mean of columns. At the end we bring all movies with it's rating for the user which we are predicting to, and removed the watched movies to let the difference between all the movies and the movies that have been watched be the final result.
 
 ## Evaluation
-We have evaluated each approach we built, **ALS model based** has accurecy **91%** for **15** users as test data, and **Movie based** has accurecy **98%** for **1** user as test data.
+We have evaluated each approach we built, **ALS model based** has accurecy **91%** for **15** users as a test data, and **Movie based** has accurecy **98%** for **1** user as a test data.
