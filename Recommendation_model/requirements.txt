@@ -3,3 +3,4 @@ Werkzeug == 1.0.1
 pyspark              
 more-itertools == 4.2.0               
 numpy == 1.8.0
+wheel == 0.35.1
