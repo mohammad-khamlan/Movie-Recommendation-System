@@ -2,4 +2,6 @@ Flask == 1.1.2
 Werkzeug == 1.0.1
 pyspark              
 more-itertools == 4.2.0               
-             
+numpy
+scipy
+pandas == 0.19.1
