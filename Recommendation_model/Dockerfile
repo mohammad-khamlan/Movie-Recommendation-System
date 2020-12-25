@@ -1,4 +1,4 @@
-FROM godatadriven/pyspark
+FROM robertlgtucker/pyspark-java8
 
 WORKDIR /app
 ADD . /app
