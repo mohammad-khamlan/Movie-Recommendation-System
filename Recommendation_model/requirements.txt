@@ -4,4 +4,3 @@ more-itertools == 4.2.0
 numpy
 pandas
 sklearn
-json
