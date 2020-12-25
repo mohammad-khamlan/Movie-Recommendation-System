@@ -4,8 +4,8 @@ import pandas as pd
 import sklearn
 from pyspark.ml.recommendation import ALSModel
 from pyspark.sql import SparkSession
-from py4j.java_gateway import java_import, JavaGateway, GatewayClient
-from pyspark.find_spark_home import _find_spark_home
+#from py4j.java_gateway import java_import, JavaGateway, GatewayClient
+#from pyspark.find_spark_home import _find_spark_home
 import itertools
 import json
 import os
@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 #os.environ['PYSPARK_SUBMIT_ARGS'] = "--master spark://192.168.1.106:4040"
 
-spark = SparkSession.builder.setAppName("Recommendation_system").getOrCreate()
+spark = SparkSession.setAppName("Recommendation_system").getOrCreate()
 #spark = SparkSession.builder.appName('Recommendation_system').getOrCreate()
 
 # load ALS model to use
