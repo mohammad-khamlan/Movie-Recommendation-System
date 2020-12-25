@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 #os.environ['PYSPARK_SUBMIT_ARGS'] = "--master spark://192.168.1.106:4040"
 
-spark = SparkSession.setAppName("Recommendation_system").getOrCreate()
+spark = SparkSession.builder.getOrCreate()
 #spark = SparkSession.builder.appName('Recommendation_system').getOrCreate()
 
 # load ALS model to use
