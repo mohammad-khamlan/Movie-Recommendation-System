@@ -58,6 +58,5 @@ def get_user_id():
         return prediction
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 6000))
-    app.run(debug=True, port = port)
+    app.run(debug=True)
 
