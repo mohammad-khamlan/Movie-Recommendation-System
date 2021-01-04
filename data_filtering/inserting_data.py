@@ -1,10 +1,11 @@
-from flask import Flask, request
+from flask import Flask, request , jsonify
 from pymongo import MongoClient
 import pymongo
 import pandas as pd
 import json
 import argparse 
 import os
+
 
 app = Flask(__name__)
 collection = 0
@@ -56,7 +57,8 @@ def take_parameters():
     movies_ids = list(map(int,request.args.getlist('ids')))
     movies_titles = get_title(movies_ids)
     movies_titles = json.dumps(movies_titles)
-    return movies_titles
+    movies_titles = {"movies_titles": movies_titles}
+    return jsonify(movies_titles)
 
 
 if __name__ == '__main__':

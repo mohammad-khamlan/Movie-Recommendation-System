@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVAI</title>
+
+    <link rel="stylesheet" href="/static/index.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="/static/index.js"></script>
+
+</head>
+
+<body onload="getDiv({{value}})">
+
+    <div class="first-div">
+        <!--
+    this div contains the logo
+        -->
+        <div class="div-logo">
+            <img src="/static/assets/logooo.png" id="logo">
+        </div>
+
+        <div class="text">
+            <div>
+                <h1 class="message" id="main-msg1" style="float: left;">
+                    Discover
+                </h1>
+                <h1 class="message" id="main-msg2" style="float: left;">
+                    new movies
+                </h1>
+            </div>
+
+            <div>
+                <h1 class="message" id="main-msg3" style="float: left;">
+                    i
+                </h1>
+                <h1 class="message" id="main-msg4" style="float: left;">
+                    n
+                </h1>
+                <h1 class="message" id="main-msg5" style="float: left;">
+                    one step
+                </h1>
+            </div>
+
+            <div class="in">
+                <p style="font-size: large;">Just enter the userID </p>
+                <form method="POST" autocomplete="off" action="/predict">
+                    <input class="form-control form-control-lg" type="number" placeholder="userID" id="userID" name="user">
+
+                    <button class="btn btn-warning" type="submit" id="submit"
+                    ><b>Submit</b>
+                    </button>
+
+                </form>
+            </div>
+
+            <div id="answer">
+                <div id="lable">
+                    <p id="results">
+                        Recommended Movies:
+                    </p>
+                </div>
+
+                <div id="movie-divs">
+                    <ol id="list-movies"></ol>
+                </div>
+            </div>
+
+        </div>
+        <!--
+        end of the first div
+        -->
+    </div>
+
+    <!--
+        About us
+    -->
+    <div class="aboutUs-div item row">
+        <!--
+            this div for header
+        -->
+        <div class="col-6" id="pic">
+            <img class="pic" src="/static/assets/whoareweart.jpg">
+        </div>
+
+        <div class="col-6" id="the-text">
+            <div>
+                <h2 class="about">
+                    About MOVAI
+                </h2>
+                <div class="horizontal-line">
+                </div>
+            </div>
+
+            <!--
+            this div for the paragraph
+        -->
+            <div class="row">
+                <p class="para">
+                    MOVAI is a web page to give you recommendations
+                    <br>
+                    for movies you've watched, using
+                    <br>
+                    machine learning algorithms and big data principles,
+                    <br>
+                    we came out with this website.
+                    Our data set consists of over than 27,000,000 rows and 6
+                    columns:
+                </p>
+            </div>
+            <!--
+            This div for nubmers to show about the data
+        -->
+            <div id="numbers" class="row">
+                <div>
+                    <p>100836</p>
+                    <p>Different users</p>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <div>
+                    <p>9742</p>
+                    <p>Different movies</p>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <div>
+                    <p>100836</p>
+                    <p>Different ratings</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--
+        team div
+    -->
+    <div class="team item">
+        <h1 class="our-team">Our Lovely Team</h1>
+
+        <div class="team-mates">
+            <div class="col-sm-3 profile">
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="/static/assets/Sami@Hult.JPG"
+                    data-holder-rendered="true">
+                <h2 class="name">Sami Imran</h2>
+                <h3 class="major">Software developer</h2>
+            </div>
+
+            <div class="col-sm-3 profile">
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="/static/assets/Mohammad.jpeg"
+                    data-holder-rendered="true">
+                <h2 class="name">Mohammad Khamlan</h2>
+                <h3 class="major">Ai specialist</h2>
+            </div>
+
+            <div class="col-sm-3 mb-1 profile">
+                <img class="rounded-circle z-depth-2 person " alt="50x50" src="/static/assets/Abdallah.jpeg"
+                    data-holder-rendered="true">
+                <h2 class="name">Abdallah Saleh</h2>
+                <h3 class="major">Ai specialist</h2>
+            </div>
+
+            <div class="col-sm-3 profile">
+                <img class="rounded-circle z-depth-2 person" alt="50x50" src="/static/assets/Noha.jpeg"
+                    data-holder-rendered="true">
+                <h2 class="name">Noha Thaher</h2>
+                <h3 class="major">Ai specialist</h2>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

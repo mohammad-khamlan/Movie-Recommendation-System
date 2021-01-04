@@ -4,13 +4,18 @@ import pandas as pd
 import sklearn
 from pyspark.ml.recommendation import ALSModel
 from pyspark.sql import SparkSession
+from py4j.java_gateway import java_import, JavaGateway, GatewayClient
+from pyspark.find_spark_home import _find_spark_home
 import itertools
 import json
 import os
 
 app = Flask(__name__)
 
-spark = SparkSession.builder.appName('Recommendation_system').getOrCreate()
+#os.environ['PYSPARK_SUBMIT_ARGS'] = "--master spark://192.168.1.106:4040"
+
+spark = SparkSession.builder.getOrCreate()
+#spark = SparkSession.builder.appName('Recommendation_system').getOrCreate()
 
 # load ALS model to use
 als_model = ALSModel.load('als_model2')
@@ -43,7 +48,7 @@ def get_user_id():
     if request.method == "POST" :
         user_id = request.get_json()['id']
         prediction = predict_movies(user_id)
-        prediction = json.dumps(prediction)
+        prediction = jsonify({"numbers": prediction}) #json.dumps(prediction)
         return prediction
 
     elif request.method == "GET" :
@@ -53,5 +58,6 @@ def get_user_id():
         return prediction
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 6000))
+    app.run(debug=True, port = port)
 

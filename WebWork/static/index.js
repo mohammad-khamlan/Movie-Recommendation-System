@@ -1,5 +1,6 @@
-function getDiv() {
+function getDiv(movies_ids) {
     clean();
+    console.log(movies_ids);
     var div = document.getElementById('answer');
     var the_list = document.getElementById('list-movies');
 
@@ -7,9 +8,9 @@ function getDiv() {
 
     var movie = document.createTextNode('rush hour');
 
-    var result_movies = ['White house down', 'Olympes has fallen', 'London has fallen', 'fallen', 'fallen'];
+    var result_movies = movies_ids;
 
-    for (var i = 0; i < result_movies.length - 2; i++) {
+    for (var i = 0; i < result_movies.length ; i++) {
         var node = document.createElement('li');
         node.style.color = 'black';
         node.style.marginBottom = '2rem';

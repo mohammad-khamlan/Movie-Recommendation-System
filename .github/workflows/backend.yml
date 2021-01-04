@@ -1,3 +1,4 @@
+
 name: dockerhub
 
 # Controls when the action will run. Triggers the workflow on push or pull request
@@ -27,11 +28,11 @@ jobs:
           
       - name: docker_build
         run: |
-          docker build ./data_filtering -t ${{secrets.DOCKER_USERNAME}}/data_filtering:latest
+          docker build ./WebWork -t ${{secrets.DOCKER_USERNAME}}/server:latest
       # Runs a set of commands using the runners shell
       - name: docker_push
         run: |
-          docker push ${{secrets.DOCKER_USERNAME}}/data_filtering:latest
+          docker push ${{secrets.DOCKER_USERNAME}}/server:latest
           
   deploy_on_heroku:
     runs-on: ubuntu-latest
@@ -40,8 +41,8 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.6.8
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "data-filtering"
+          heroku_app_name: "als-server"
           heroku_email: "mohammad.khamlan@stu.najah.edu"
-          appdir: "./data_filtering"  
+          appdir: "./WebWork"  
           usedocker: 1
           dontuseforce: 1

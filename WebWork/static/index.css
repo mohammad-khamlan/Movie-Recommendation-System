@@ -19,7 +19,7 @@ body{
 .text{
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .first-div{
@@ -65,12 +65,11 @@ body{
 }
 
 #submit{
-    margin-top: 0.5%;
-    margin-left: 2%;
-    width: 8%;
-    border-radius: 5%;
+    margin-top: -5%; 
+    margin-left: 35%; 
+    width: 8%; 
 }
-
+ 
 #answer{
     width: 32%;
     height: max-content;
