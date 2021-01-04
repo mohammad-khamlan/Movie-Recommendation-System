@@ -1,3 +1,6 @@
 Flask==1.1.2
 pyspark              
 more-itertools == 4.2.0               
+numpy
+pandas
+sklearn

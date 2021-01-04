@@ -1,8 +1,6 @@
 from flask import Flask , render_template , request
 import csv
 import pandas as pd
-from pyspark.ml.recommendation import ALSModel
-from pyspark.sql import SparkSession
 import itertools 
 import json
 import requests

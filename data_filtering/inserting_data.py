@@ -51,7 +51,8 @@ def take_parameters():
     movies_ids = request.get_json()['ids']
     movies_titles = get_title(movies_ids)
     movies_titles = json.dumps(movies_titles) 
-    return movies_titles
+    movies_titles = {"movies_titles": movies_titles}
+    return jsonify(movies_titles)
 
   elif request.method == "GET" :
     movies_ids = list(map(int,request.args.getlist('ids')))
